@@ -1,6 +1,6 @@
-provider "google" {
-  project = "flat-white001"
-  region  = "us-west1"
-  zone    = "us-west1-b"
+resource "google_project_service" "project_service" {
+  project            = "gcp-project-01-468116"
+  for_each           = toset(var.gcp_services)
+  disable_on_destroy = false
+  service            = each.key
 }
-
