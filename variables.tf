@@ -23,13 +23,6 @@ variable "environment" {
   default     = "dev"
 }
 
-variable "project_id" {
-  description = "The GCP project ID."
-  type        = string
-  default     = "flat-white001"
-
-}
-
 variable "region" {
   description = "The GCP region."
   type        = string
