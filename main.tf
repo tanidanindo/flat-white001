@@ -10,3 +10,9 @@ resource "google_service_account" "sa-test" {
   display_name = "sa-test"
   project      = var.project_id
 }
+
+resource "google_project_iam_member" "sa-test" {
+  project = var.project_id
+  role    = "roles/editor"
+  member  = "serviceAccount:${google_service_account.sa-test.email}"
+}
