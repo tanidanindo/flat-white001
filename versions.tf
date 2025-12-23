@@ -3,7 +3,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 5.0" # Lock to a major version for stability
+      version = "~> 7.14" # Lock to a major version for stability
     }
   }
   backend "remote" {
